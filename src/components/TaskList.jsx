@@ -12,7 +12,7 @@ function TaskList() {
     <div>
       {tasks.map((task) => (
         <div>
-          <h1>{task.tittle}</h1>
+          <h3>{task.title}</h3>
           <p>{task.description}</p>
         </div>
       ))}
