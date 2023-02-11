@@ -13,7 +13,7 @@ function TaskForm({ createTask }) {
       <input
         type="text"
         placeholder="write your task"
-        onChange={(e) => setTitle(e.target.value())}
+        onChange={(e) => setTitle(e.target.value)}
       />
       <button>Save</button>
     </form>
