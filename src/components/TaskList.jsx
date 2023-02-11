@@ -1,15 +1,6 @@
-import { useState, useEffect } from "react";
-import { tasks as data } from "../mocks/task";
-
-function TaskList() {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    setTasks(data);
-  }, []);
-
+function TaskList({ tasks }) {
   if (tasks.length === 0) {
-    return <h1>No tasks right now</h1>
+    return <h1>No tasks right now</h1>;
   }
 
   return (
