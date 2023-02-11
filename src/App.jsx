@@ -13,9 +13,19 @@ function App() {
     setTasks(data);
   }, []);
 
+  function createTask(taskTitle) {
+    setTasks([
+      ...tasks,
+      {
+        id: tasks.length + 1,
+        title: taskTitle,
+      },
+    ]);
+  }
+
   return (
     <>
-      <TaskForm />
+      <TaskForm createTask={createTask} />
       <TaskList tasks={tasks} />
     </>
   );
