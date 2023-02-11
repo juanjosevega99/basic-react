@@ -7,6 +7,8 @@ function TaskForm({ createTask }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     createTask({ title, description });
+    setTitle("");
+    setDescription("");
   };
 
   return (
@@ -15,6 +17,7 @@ function TaskForm({ createTask }) {
         type="text"
         placeholder="write your task"
         onChange={(e) => setTitle(e.target.value)}
+        value={title}
       />
       <textarea
         name=""
@@ -23,6 +26,7 @@ function TaskForm({ createTask }) {
         rows="10"
         placeholder="Write the description"
         onChange={(e) => setDescription(e.target.value)}
+        value={description}
       ></textarea>
       <button>Save</button>
     </form>
